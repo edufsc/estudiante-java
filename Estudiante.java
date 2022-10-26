@@ -18,6 +18,7 @@ public class Estudiante {
 		this.numeroDeNotas = 0;
 		this.sumaDeNotas = 0;
 		this.notaMedia = 0;
+		// los arrays de tipos básicos deben inicializarse sabiendo cuántos espacios necesitamos, en este caso 10
 		this.notas = new float[10];
 	}
 
@@ -108,19 +109,22 @@ public class Estudiante {
 		return new Estudiante();
 	}
 
+	// ponemos lo relacionado con notas a 0
 	public void reiniciarNotas() {
 		this.numeroDeNotas = 0;
 		this.sumaDeNotas = 0;
 		this.notaMedia = 0;
 	}
 
+	// método estático para averiguar el estudiante con más media
 	public static Estudiante compararMedia(Estudiante e1, Estudiante e2) {
 		if (e1.notaMedia > e2.notaMedia) {
 			return e1;
 		}
 		return e2;
 	}
-
+	
+	// mostrar la lista de notas del estudiante
 	public void mostrarNotas() {
 		for (int i = 0; i < this.notas.length; i++) {
 			System.out.println(this.notas[i]);
